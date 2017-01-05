@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+    function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/kedai_style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" /> 
+
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- //js -->
+
+<!-- font-awesome icons -->
+<link href='css/font_2.css' rel='stylesheet' type='text/css'>
+<link href='css/font_1.css' rel='stylesheet' type='text/css'>
+<!-- //font-awesome icons -->
+
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function($) {
+    $(".scroll").click(function(event){   
+      event.preventDefault();
+      $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+    });
+  });
+</script>
+<!-- start-smoth-scrolling -->
+<!-- script-for sticky-nav -->
+  <script>
+  $(document).ready(function() {
+     var navoffeset=$(".agileits_header").offset().top;
+     $(window).scroll(function(){
+      var scrollpos=$(window).scrollTop(); 
+      if(scrollpos >=navoffeset){
+        $(".agileits_header").addClass("fixed");
+      }else{
+        $(".agileits_header").removeClass("fixed");
+      }
+     });
+     
+  });
+  </script>
+<!-- //script-for sticky-nav -->
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".dropdown").hover(            
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).slideDown("fast");
+            $(this).toggleClass('open');        
+        },
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).slideUp("fast");
+            $(this).toggleClass('open');       
+        }
+    );
+});
+</script>
+<!-- here stars scrolling icon -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      /*
+        var defaults = {
+        containerID: 'toTop', // fading element id
+        containerHoverID: 'toTopHover', // fading element hover id
+        scrollSpeed: 1200,
+        easingType: 'linear' 
+        };
+      */
+                
+      $().UItoTop({ easingType: 'easeOutQuart' });
+                
+      });
+  </script>
+<!-- //here ends scrolling icon -->
+<script src="js/minicart.min.js"></script>
+<script>
+  // Mini Cart
+  paypal.minicart.render({
+    action: '#'
+  });
+
+  if (~window.location.search.indexOf('reset=true')) {
+    paypal.minicart.reset();
+  }
+</script>
+      <!-- flexSlider -->
+<!--         <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
+        <script defer src="js/jquery.flexslider.js"></script>
+        <script type="text/javascript">
+        $(window).load(function(){
+          $('.flexslider').flexslider({
+          animation: "slide",
+          start: function(slider){
+            $('body').removeClass('loading');
+          }
+          });
+        });
+        </script> -->
+      <!-- //flexSlider -->
+    <base href="/">
+    <title>Kedai AN</title>
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="node_modules/angular2/bundles/router.dev.js"></script>
+    <script src="node_modules/angular2/bundles/http.dev.js"></script>
+    <script>
+      System.config({
+        packages: {        
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('app/boot')
+            .then(null, console.error.bind(console));
+    </script>
+  </head>
+  <body>
+    <my-app>Loading...</my-app>
+  </body>
+</html>
