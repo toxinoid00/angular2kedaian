@@ -12,28 +12,28 @@ export var CatalogMock =
     description:"Ayam dada ditambah nasi",
     price: 15000,
     name:"Paket Ayam 2",
-    image_src:"/images/1.png"
+    image_src:"/images/2.png"
 },{
     id:"3",
     manufacturer:"Mini Burger",
     description:"Burger dengan daging lezat",
     price: 8000,
     name:"Mini Burger",
-    image_src:"/images/1.png"
+    image_src:"/images/3.png"
 },{
     id:"4",
     manufacturer:"Milo",
     description:"Ice cream dengan ukuran medium, cukup untuk sendirian",
     price: 7500,
     name:"Milo",
-    image_src:"/images/1.png"
+    image_src:"/images/4.png"
 },{
     id:"5",
     manufacturer:"Medium Ice Cream",
     description:"Minuman susu rasa coklat",
     price: 7500,
     name:"Medium Ice Cream",
-    image_src:"/images/1.png"
+    image_src:"/images/5.png"
 }];
 // [
 // {

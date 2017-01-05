@@ -6,11 +6,11 @@ import {Item} from "./Models/Item.model";
 import {CartService} from "./Services/cart.service";
 
 @Component({
-    selector: 'item-preview',
-    templateUrl: "../app/views/item-preview.html",
+    selector: 'item-preview-cart',
+    templateUrl: "../app/views/item-preview-cart.html",
 })
 
-export class ItemPreview {
+export class ItemPreviewCart {
     @Input() item:Item;
     constructor(private router: Router, private cartService:CartService){
 

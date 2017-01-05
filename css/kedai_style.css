@@ -4305,3 +4305,164 @@ ul.wmuSliderPagination {
 		font-size: 13px;
 	}
 }
+/*--checkout--*/
+.check {
+    padding: 3em 0;
+}
+a.continue,a.order {
+    background: #100b0b;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2em;
+    font-family: 'Pathway Gothic One';
+    text-transform: uppercase;
+}
+a.continue:hover, a.order:hover{
+    background: #fa5400;
+    transition: 0.5s all;
+}
+a.order{
+    margin: 15px 0;
+}
+.price-details h3 {
+    color: #100b0b;
+    font-size: 25px;
+    margin-bottom: 1em;
+    font-family: 'Pathway Gothic One';
+}
+.price-details span {
+    width: 50%;
+    float: left;
+    font-size: 15px;
+    color:#aaa;
+    line-height: 1.8em;
+}
+ul.total_price {
+    list-style-type: none;
+}
+ul.total_price li.last_price {
+    width: 50%;
+    float: left;
+}
+li.last_price h4 {
+    color: #655858;
+    margin-top: 5px;
+}
+li.last_price span {
+    font-size: 20px;
+    color: #655858;
+}
+.cart-items h1 {
+    font-family: 'Pathway Gothic One';
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #100b0b;
+}
+.cart-item {
+    width: 20%;
+    float: left;
+    margin-right: 2em;
+}
+.cart-item-info {
+    width: 75%;
+    float: left;
+    margin-top: 3em;
+}
+ul.qty {
+    list-style-type: none;
+}
+ul.qty li {
+    display: inline-block;
+    margin-right: 10%;
+}
+.delivery {
+    margin: 3em 0;
+}
+.delivery p {
+    color: #aaa;
+    font-size: 16px;
+    font-weight: 400;
+    float: left;
+}
+.delivery span{
+    color: #aaa;
+    font-size: 1em;
+    font-weight: 400;
+    float: right; 
+}
+.cart-header,.cart-header2 {
+    position: relative;
+}
+.close1,.close2{
+    position: absolute;
+    right: 0%;
+    color: #D2D2D2;
+    font-size: 20px;
+    cursor: pointer;
+}
+.grid-gallery,.grid-details {
+    padding: 0;
+}
+.grid-details{
+    width: 23%;
+    float: left;
+    margin-left: 22px;
+}
+.sky-form h4 {
+    font-weight: 600;
+    padding: 10px 0;
+    text-transform: uppercase;
+    color: #100B0B;
+    font-size: 18px;
+    font-family: 'Pathway Gothic One';
+}
+span.glyphicon.glyphicon-minus {
+    color: #fff;
+    background-color: #A5E126;
+    font-size: 12px;
+    padding: 0px 5px;
+    margin-right: 7px;
+}
+.col.col-4 {
+    padding: 0px 0px 0px 15px;
+}
+ul.place {
+    list-style-type: none;
+}
+ul.place li {
+    font-size: 15px;
+    color: #aaa;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 6px;
+    font-family: 'Didact Gothic';
+}
+ul.place li.sort {
+    float: left;
+}
+ul.place li.by {
+    float: right;
+}
+ul.dropdown-menu1 {
+    list-style-type: none;
+}
+input#amount {
+    border: 1px solid #aaa !important;
+}
+.single-bottom a p {
+    font-weight: 400;
+    color: #676262;
+    margin-left: 5px;
+    font-size: 13px;
+}
+.single-bottom a p:hover{
+    color: #fa5400;
+}

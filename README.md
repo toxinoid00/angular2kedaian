@@ -1,16 +1,13 @@
-# angular2kedaian 
-Kedai AN - Order and Delivery Information System with Angular 2
+# Angular2 (ng2) + TypeScript Shopping Cart 
+## Work in progress
 
-Authors : Muhammad Husain Fadhlullah - Front end <br />
-		  Muhammad Ihya'ul Khair - Front end <br />
-		  Muhammad Imam Fauzan - Back end <br />
+Done:
+* Catalog
+* Item Preview
+* Catalog operation - search
+* Shopping Cart
+* Checkout mock
 
-Before installation : <br />
-- You need install Node.js (from : https://nodejs.org/en/)
-
-Intallation Intruction :
-1. Download/clone this repository <br />
-2. Open folder <br />
-3. open console/cmd (make sure the inside of the path) <br />
-4. type "npm install" <br />
-5. type "npm start"
+To be done:
+* Markup
+* Catalog operation - filter
