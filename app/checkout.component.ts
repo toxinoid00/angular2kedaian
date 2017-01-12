@@ -1,7 +1,6 @@
 import {Component} from 'angular2/core';
 import {NgIf, FORM_DIRECTIVES} from "angular2/common";
 import {Item} from "./Models/Menu.model";
-import {Router, RouteConfig, ROUTER_DIRECTIVES, RouterLink, RouterOutlet} from 'angular2/router';
 import {CartService} from "./Services/cart.service";
 import {ItemPreviewCart} from "./item-preview-cart.component";
 import {DefaultCheckout} from "./Services/checkout.service";
@@ -11,13 +10,13 @@ import {Catalog} from "./catalog.component";
 import {Location} from 'angular2/router';
 
 @Component({
-    selector:'cart',
-    directives:[NgIf, RouterLink, ItemPreviewCart, FORM_DIRECTIVES],
+    selector:'checkout',
+    directives:[NgIf, ItemPreviewCart, FORM_DIRECTIVES],
     providers:[DefaultCheckout],
-    templateUrl:"../app/views/cart.html",
+    templateUrl:"../app/views/checkout.html",
 })
 
-export class Cart {
+export class Checkout {
     private location: Location;
     private cartItems: Item[] = [];
     // private paymentOutput: string = "";

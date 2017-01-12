@@ -1,7 +1,7 @@
 <div class="check" *ngIf=cartItems>
     <div class="container">     
         <div class="col-md-3 cart-total">
-            <a class="continue" href="Home" (click)="goBack()">Kembali Belanja</a>
+            <a class="continue" [routerLink]="['/Catalog']">Kembali Belanja</a>
             <div class="price-details">
                 <h3>Price Details</h3>                
             </div>
@@ -12,7 +12,7 @@
                <div class="clearfix"></div>
             </ul> 
             <div class="clearfix"></div>
-            <a class="order" href="#">Lanjutkan Order</a>
+            <a class="order" [routerLink]="['/Checkout']">Lanjutkan Order</a>
         </div>
         <div class="col-md-9 cart-items">
             <h1>Keranjang Belanja</h1>

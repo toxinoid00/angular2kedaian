@@ -8,7 +8,7 @@ import 'rxjs/Rx';
 @Injectable()
 export class HTTPTestService{
   constructor(private _http:Http){}
-    getUser(){
+    getMenu(){
       return this._http.get("http://localhost:8000/api/kedai/menu/?format=json")
       .map(res=>res.json());
     };
@@ -33,4 +33,5 @@ export class HTTPTestService{
       .toPromise()
       .then(res=>res.json());
     }
+     
 }

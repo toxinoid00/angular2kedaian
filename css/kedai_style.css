@@ -4397,7 +4397,7 @@ ul.qty li {
 .close1,.close2{
     position: absolute;
     right: 0%;
-    color: #D2D2D2;
+    color: #FF0000;
     font-size: 20px;
     cursor: pointer;
 }

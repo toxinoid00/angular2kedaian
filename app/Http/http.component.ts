@@ -23,7 +23,7 @@ export class HTTPTestComponent{
 
   onGet(){
     console.log('Getting user now.');
-    this._httpService.getUser().subscribe(
+    this._httpService.getMenu().subscribe(
       data =>this.getData = JSON.stringify(data),
       error=>alert(error),
       ()=>console.log('Finished Get')
