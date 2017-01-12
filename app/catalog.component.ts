@@ -2,7 +2,7 @@ import {Component} from 'angular2/core';
 import {FORM_DIRECTIVES, NgIf} from "angular2/common";
 
 import {CatalogService} from './Services/shopping.service';
-import {Item} from "./Models/Item.model";
+import {Item} from "./Models/Menu.model";
 import {ItemPreview} from "./item-preview.component";
 import {FilterCatalogItems} from './Utils/Filter.pipe';
 

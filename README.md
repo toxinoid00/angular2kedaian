@@ -14,3 +14,12 @@ We Use Angular 2 (Front-End) and Django (Back-end)
 + Muhammad Imam Fauzan (Back - End Developer)
 + Muhammad Husain Fadhlullah (Front - End Developer)
 + Muhammad Ihya'ul Khair (Front - End Developer)
+
+# To do
+1. Memesan Menu (Done)
+2. Get and remove menu (Done)
+3. Count Jumlah Menu
+4. Order Now!
+5. HTTP Get
+6. HTTP Post
+7. Search Menu

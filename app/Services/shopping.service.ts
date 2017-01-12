@@ -1,5 +1,5 @@
 import {Injectable} from 'angular2/core';
-import {Item} from '../Models/item.model';
+import {Item} from '../Models/menu.model';
 
 import {CatalogMock} from '../Mock/catalog.mock.json'
 
@@ -18,7 +18,7 @@ export class CatalogService {
     getById(id:String):Item {
         var item:Item = null;
         this.catalog.some((catalogItem)=>{
-            if(catalogItem.id===id){
+            if(catalogItem.id_menu===id_menu){
                 item = catalogItem;
                 return true;
             }

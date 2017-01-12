@@ -2,7 +2,7 @@ import {Component, Input} from 'angular2/core';
 import {Router} from 'angular2/router';
 
 import {CatalogService} from './Services/shopping.service';
-import {Item} from "./Models/Item.model";
+import {Item} from "./Models/Menu.model";
 import {CartService} from "./Services/cart.service";
 
 @Component({
@@ -16,10 +16,10 @@ export class ItemPreview {
 
     }
     ViewDetails(){
-        this.router.navigate( ['Details', { id: this.item.id }] )
+        this.router.navigate( ['Details', { id_menu: this.item.id_menu }] )
     }
     addToCart(){
         this.cartService.addItem(this.item);
-        console.log(this.cartService.getTotalPrice())
+        alert(this.item.nama_menu.toString()+" Telah Masuk Keranjang");
     }
 }

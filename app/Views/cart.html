@@ -1,26 +1,25 @@
-            <!-- check-out -->
-            <div class="check" *ngIf=cartItems>
-                <div class="container">     
-                    <div class="col-md-3 cart-total">
-                        <a class="continue" href="#">Kembali Belanja</a>
-                        <div class="price-details">
-                            <h3>Price Details</h3>                
-                        </div>
-                        <hr class="featurette-divider">
-                        <ul class="total_price">
-                           <li class="last_price"><h4>TOTAL</h4></li>    
-                           <li class="last_price"><span>{{cartService.getTotalPrice()}}</span></li>
-                           <div class="clearfix"></div>
-                        </ul> 
-                        <div class="clearfix"></div>
-                        <a class="order" href="#">Lanjutkan Order</a>
-                    </div>
-                    <div class="col-md-9 cart-items">
-                        <h1>Keranjang Belanja</h1>
-                        <div *ngFor="#item of cartItems">
-                        <item-preview-cart [item]="item"></item-preview-cart>
-                        </div>          
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
+<div class="check" *ngIf=cartItems>
+    <div class="container">     
+        <div class="col-md-3 cart-total">
+            <a class="continue" href="Home" (click)="goBack()">Kembali Belanja</a>
+            <div class="price-details">
+                <h3>Price Details</h3>                
             </div>
+            <hr class="featurette-divider">
+            <ul class="total_price">
+               <li class="last_price"><h4>TOTAL</h4></li>    
+               <li class="last_price"><span>{{cartService.getTotalPrice()}}</span></li>
+               <div class="clearfix"></div>
+            </ul> 
+            <div class="clearfix"></div>
+            <a class="order" href="#">Lanjutkan Order</a>
+        </div>
+        <div class="col-md-9 cart-items">
+            <h1>Keranjang Belanja</h1>
+            <div *ngFor="#item of cartItems">
+                <item-preview-cart [item]="item"></item-preview-cart>
+            </div>          
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
