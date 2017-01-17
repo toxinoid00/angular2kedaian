@@ -1,6 +1,4 @@
 import {Injectable} from "angular2/core";
-import {discounts} from "../Mock/discounts.mock.json";
-import {paymentMethods} from "../Mock/payment-methods.mock.json";
 
 export interface ICheckoutType {
     name:string;

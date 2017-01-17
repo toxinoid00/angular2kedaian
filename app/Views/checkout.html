@@ -1,1 +1,47 @@
-Hello Kakak
+<form> 
+ 
+<div class="form-group">
+<label class="col-xs-2" >Nama Pelanggan :</label>
+<div class="col-xs-10">
+<input type="text" style="width: 300px" class="form-control" [(ngModel)]="nama_pelanggan">
+</div>
+ 
+</div>
+ 
+ 
+<div class="form-group">
+<label class="col-xs-2" >No HP :</label>
+ 
+<div class="col-xs-10">
+<input type="text" style="width: 300px" class="form-control" [(ngModel)]="no_hp_pelanggan">
+</div>
+ 
+</div>
+
+<div class="form-group">
+<label class="col-xs-2" >Keterangan Lokasi:</label>
+<div class="col-xs-10">
+<input type="text" style="width: 300px" class="form-control" [(ngModel)]="keterangan_lokasi">
+</div>
+ 
+</div>
+
+<div class="form-group">
+<label class="col-xs-2" >Gedung :</label>
+<div class="col-xs-10">
+<input type="text" style="width: 300px" class="form-control" [(ngModel)]="id_gedung">
+</div>
+ 
+</div> 
+ 
+<div class="form-group">
+<label class="col-xs-2 control-label text-primary" ></label>
+ 
+<div class="col-xs-10">
+<button class="btn btn-success" (click)="postDataToServer()">Order Now!</button>
+ 
+</div>
+ 
+</div>
+ 
+</form>

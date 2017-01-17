@@ -9,14 +9,14 @@ import 'rxjs/Rx';
 export class HTTPTestService{
   constructor(private _http:Http){}
     getMenu(){
-      return this._http.get("http://localhost:8000/api/kedai/menu/?format=json")
+      return this._http.get("http://localhost:8000/api/kedai/menu/")
       .map(res=>res.json());
     };
 
-    postJson(){
+    postJson(nama_suplier:string,alamat_suplier:string){
       var json = JSON.stringify({
-        "nama_suplier": "Husain",
-        "alamat_suplier": "Sarijadi"
+        "nama_suplier": nama_suplier,
+        "alamat_suplier": alamat_suplier
       });
       var params = json;
       var header = new Headers();

@@ -1,38 +1,31 @@
+/**
+ * Created by Tareq Boulakjar. from angulartypescript.com
+ */
 import {Component} from 'angular2/core';
-import {NgIf, FORM_DIRECTIVES} from "angular2/common";
-import {Item} from "./Models/Menu.model";
-import {CartService} from "./Services/cart.service";
-import {ItemPreviewCart} from "./item-preview-cart.component";
-import {DefaultCheckout} from "./Services/checkout.service";
-// import {paymentMethods} from "./Mock/payment-methods.mock.json";
-import {ICheckoutType} from "./Services/checkout.service";
-import {Catalog} from "./catalog.component";
-import {Location} from 'angular2/router';
-
+import {Pelanggan} from './Services/checkout.service2';
+// Our HTTP Component
 @Component({
-    selector:'checkout',
-    directives:[NgIf, ItemPreviewCart, FORM_DIRECTIVES],
-    providers:[DefaultCheckout],
-    templateUrl:"../app/views/checkout.html",
+    selector: 'checkout',
+    templateUrl: '../app/views/checkout.html',
+    providers: [Pelanggan]
+ 
 })
-
 export class Checkout {
-    private location: Location;
-    private cartItems: Item[] = [];
-    // private paymentOutput: string = "";
-    constructor(private cartService:CartService, private defaultCheckout:DefaultCheckout){
-        this.cartItems = cartService.getCart();
+
+    postMyPelanggan;
+ 
+    nama_pelanggan;
+    no_hp_pelanggan;
+    keterangan_lokasi;
+    id_gedung;
+    constructor(private _pelangganService:Pelanggan){
+ 
     }
-    goBack(){
-        this.location.back();
+    postDataToServer(){
+        this._pelangganService.postPelanggan(this.nama_pelanggan,this.no_hp_pelanggan, this.keterangan_lokasi, this.id_gedung).subscribe(//call the post
+                data => this.postMyPelanggan = JSON.stringify(data), // put the data returned from the server in our variable
+                error => alert("Error"),console.log("Error HTTP Post Service"), // in case of failure show this message
+                () => alert("Berhasil"),console.log("Job Done Post !")//run this code in all cases
+            );
     }
-    // setPaymentType(type:string){
-    //     this.defaultCheckout.checkOutType = paymentMethods.filter(paymentMethod=>paymentMethod.name.toLowerCase()===type.toLowerCase())[0];
-    // }
-    // setDiscount(name:string){
-    //     this.cartService.applyDiscount(name);
-    // }
-    // pay(){
-    //     this.paymentOutput = this.cartService.getTotalPrice().toString();
-    // }
 }

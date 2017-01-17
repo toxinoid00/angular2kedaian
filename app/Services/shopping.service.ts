@@ -1,6 +1,7 @@
 import {Injectable} from 'angular2/core';
 import {Item} from '../Models/menu.model';
-import {CatalogMock} from '../Mock/catalog.mock.json'
+import {CatalogMock} from '../Mock/catalog.mock.json';
+
 @Injectable()
 export class CatalogService {
     private catalog:Item[];

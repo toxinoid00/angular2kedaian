@@ -17,28 +17,27 @@ import {HTTPTestService} from '../app/http/http.service';
 })
 
 export class Catalog {
-    public getData:Item[] = [];
+    getData
     public catalog:Item[] = [];
     public postData:string;
     public search:string = "";
-    constructor(private catalogService:CatalogService, private _httpService:HTTPTestService){
-        console.log('Getting user now.');
-        this._httpService.getMenu().subscribe(
-          data =>this.getData = JSON.stringify(data),
-          error=>alert(error),
-          ()=>console.log('Finished Get')
-        );
+// 
+    constructor(private catalogService:CatalogService,private _httpService:HTTPTestService){
+        
+    }
+
+    onGet(){
+        console.log('Getting user based on promise now.');
+        this._httpService.getUsersByPromise()
+        .then(
+        res=>this.getData = JSON.parse(JSON.stringify(res)),
+        err=>alert(err)
+    );
     }
     ngOnInit() {
+        this.onGet();
         this.catalogService.getCatalog().then((catalog)=>{
             this.catalog = catalog;
         });
     }
-    onPost(){
-      this._httpService.postJson().subscribe(
-      data =>this.postData = JSON.stringify(data),
-      error=>alert(error),
-      ()=>console.log('Finished Post')
-    );
-  }
 }
