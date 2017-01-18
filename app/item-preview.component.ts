@@ -20,6 +20,6 @@ export class ItemPreview {
     }
     addToCart(){
         this.cartService.addItem(this.item);
-        alert(this.item.nama_menu.toString()+" Telah Masuk Keranjang");
+        alert(this.item.detail_menu.nama_menu.toString()+" Telah Masuk Keranjang");
     }
 }

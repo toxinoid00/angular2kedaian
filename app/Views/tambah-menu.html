@@ -1,0 +1,101 @@
+<div class="check">
+    <div class="container">   
+    <div class="form-group">
+    <label class="col-md-2" >Nama Menu :</label>
+    <div class="col-md-10" style="margin-bottom: 10px">
+    <input type="text" style="width: 300px" class="form-control" [(ngModel)]="nama_menu">
+    </div>
+     
+    </div>
+     
+     
+    <div class="form-group">
+    <label class="col-md-2">Harga Menu :</label>
+     
+    <div class="col-md-10" style="margin-bottom: 10px">
+    <input type="text" style="width: 300px" class="form-control" [(ngModel)]="harga_menu">
+    </div>
+     
+    </div>
+
+    <div class="form-group">
+    <label class="col-md-2" >Deskripsi Menu :</label>
+    <div class="col-md-10" style="margin-bottom: 10px">
+    <textarea type="text" style="width: 300px" class="form-control" [(ngModel)]="deskripsi_menu"></textarea>
+    </div>
+     
+    </div>
+
+    <div class="form-group">
+    <label class="col-md-2" >Foto Menu :</label>
+    <div class="col-md-10" style="margin-bottom: 10px">
+    <input type="text" style="width: 300px" class="form-control" [(ngModel)]="foto_menu">
+    </div>
+     
+    </div> 
+
+    <div class="form-group">
+    <label class="col-md-2" >Id Suplier :</label>
+    <div class="col-md-10" style="margin-bottom: 10px">
+    <select class="form-control" style="width: 300px" [(ngModel)]="id_suplier">
+        <option *ngFor="#suplier of getSuplier">
+        {{suplier.id_suplier}}</option>
+    </select>
+    </div>
+     
+    </div> 
+     
+    <div class="form-group">
+    <label class="col-md-2 control-label text-primary"></label>
+     
+    <div class="col-md-3 cart-total">
+    <button class="order" (click)="tambahMenuToServer()">Tambah</button>
+     {{nama_menu}} {{harga_menu}} {{deskripsi_menu}} {{foto_menu}} {{id_suplier}}
+    </div>
+     
+    </div>
+</div>
+</div>
+<!-- <div class="check">
+    <div class="container">     
+        <div class="add-menu">
+            <h2>Tambah Menu</h2>
+                <legend></legend>
+                <div class="col-md-4 agileits_team_grid">
+                    <input type='file' (change)="readUrl($event)">
+                    <img [src]="url" height="300" width="350">
+                </div>
+                <div class="col-md-4 agileits_team_grid">
+                    <br><br><br>
+                    Nama Menu<br>
+                    <input type="text" name="namamenu"><br><br>
+
+                    Harga<br>
+                    <input type="text" name="hargamenu"><br><br> 
+                    <select class="form-control">
+                        <option value="0">D'Besto</option>
+                        <option value="1">Martabak Royal Jaya</option>
+                    </select>
+                    
+                    <div class="btn-group" uib-dropdown keyboard-nav>
+                        <button id="simple-btn-keyboard-nav" type="button" class="btn btn-primary" uib-dropdown-toggle>
+                            Supplier <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav">
+                            <li role="menuitem"><a href="#">Action</a></li>
+                            <li role="menuitem"><a href="#">Another action</a></li>
+                            <li role="menuitem"><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li role="menuitem"><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>       
+                </div>
+                <div class="col-md-1 agileits_team_grid">
+                    <br>
+                    Deskripsi:<br>
+                    <textarea name="deskripsimenu" rows="2" cols="25" placeholder="" style="height:200px;width:400px"></textarea>
+                </div> 
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div> -->

@@ -3,6 +3,7 @@ import {Router} from 'angular2/router';
 
 import {CatalogService} from './Services/shopping.service';
 import {Item} from "./Models/Menu.model";
+// import {Menu} from "./Models/Menu2.model";
 import {CartService} from "./Services/cart.service";
 
 @Component({

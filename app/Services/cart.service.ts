@@ -35,11 +35,41 @@ export class CartService {
     }
     getTotalPrice(){
         let totalPrice = this.cart.reduce((sum, cartItem)=>{
-            return sum+=cartItem.harga_menu, sum;
+            return sum+=cartItem.detail_menu.harga_menu, sum;
         },0);
         // if(this.discount){
         // totalPrice -= totalPrice=this.discount.amount;
         // }
         return totalPrice;
     }
+  // increaseQuantity(item: Item) : boolean
+  // {
+  //   let isFound: boolean = false;
+  //   for (var i = 0; i < item.length; i++) {
+  //     if(item[i].item.id_menu === item.id_menu)
+  //     {
+  //       item[i].quantity++;
+  //       isFound = true;
+  //     }
+  //   }
+  //   localStorage.setItem('item', JSON.stringify(item));
+  //   return isFound;
+  // }
+
+  // decreaseQuantity(item: Item) : boolean
+  // {
+  //   let isFound: boolean = false;
+  //   for (var i = 0; i < item.length; i++) {
+  //     if(item[i].item.id_menu === item.id_menu)
+  //     {
+  //       if(item[i].quantity != 1)
+  //       {
+  //         item[i].quantity--;
+  //         isFound = true;
+  //       }
+  //     }
+  //   }
+  //   localStorage.setItem('item', JSON.stringify(item));
+  //   return isFound;
+  // }
 }

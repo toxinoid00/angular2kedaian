@@ -2,13 +2,13 @@
   <div class="close1"><span class="glyphicon glyphicon-remove" aria-hidden="true" (click)="deleteItem()"></span></div>
   <div class="cart-sec simpleCart_shelfItem">
     <div class="cart-item cyc">
-        <img src={{item.foto_menu}} class="img-responsive" alt=""/>
+        <img src={{item.detail_menu.foto_menu}} class="img-responsive" alt=""/>
     </div>
    <div class="cart-item-info">
         <ul class="qty">
-            <li><p>Name : {{item.nama_menu}}</p></li>
+            <li><p>Name : {{item.detail_menu.nama_menu}}</p></li>
             <li><p>Jumlah : 1</p></li>
-            <li><p>Harga : Rp {{item.harga_menu}}</p></li>
+            <li><p>Harga : Rp {{item.detail_menu.harga_menu}}</p></li>
         </ul>  
    </div>
    <div class="clearfix"></div>

@@ -2,6 +2,7 @@ import {Component} from 'angular2/core';
 import {Router, RouteConfig, ROUTER_DIRECTIVES, RouterLink, RouterOutlet} from 'angular2/router';
 import {Catalog} from "./catalog.component";
 import {Cart} from "./cart.component";
+import {TambahMenu} from "./tambah-menu.component";
 import {Home} from "./home";
 import {Contact} from "./contact.component";
 import {About} from "./About";
@@ -25,7 +26,8 @@ import {Observable} from 'rxjs/Rx';
   { path:'/About', name: 'About', component: About },
   { path:'/Cart/Checkout', name: 'Checkout', component: Checkout },
   // { path:'/Item/:id', name: 'Details', component: Details },
-  { path:'/Cart', name: 'Cart', component: Cart }
+  { path:'/Cart', name: 'Cart', component: Cart },
+  { path:'/TambahMenu', name: 'TambahMenu', component: TambahMenu}
 ])
 
 export class AppComponent {

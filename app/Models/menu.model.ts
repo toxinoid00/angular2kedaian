@@ -1,8 +1,12 @@
-export interface Item {
+export interface Item{
+	id_menu_harian: string;
+	tanggal : string;
+	id_menu : string;
+	detail_menu : DetailMenu[];
+}
+export interface DetailMenu {
 	nama_menu: string;
 	harga_menu: number;
-    id_menu: string;
-    id_suplier: string;
     deskripsi_menu: string;
-    foto_menu: string;
+    foto_menu:string;
 }

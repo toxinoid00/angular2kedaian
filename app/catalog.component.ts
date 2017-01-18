@@ -3,6 +3,7 @@ import {FORM_DIRECTIVES, NgIf} from "angular2/common";
 
 import {CatalogService} from './Services/shopping.service';
 import {Item} from "./Models/Menu.model";
+// import {Menu} from "./Models/Menu2.model";
 import {ItemPreview} from "./item-preview.component";
 import {FilterCatalogItems} from './Utils/Filter.pipe';
 import {HTTPTestService} from '../app/http/http.service';
@@ -18,6 +19,7 @@ import {HTTPTestService} from '../app/http/http.service';
 
 export class Catalog {
     getData;
+    // menu;
     public catalog:Item[] = [];
     public postData:string;
     public search:string = "";
@@ -26,7 +28,7 @@ export class Catalog {
         
     }
 
-    onGet(){
+    onGet(){     
         console.log('Getting user based on promise now.');
         this._httpService.getUsersByPromise()
         .then(
@@ -34,6 +36,14 @@ export class Catalog {
         err=>alert(err)
     );
     }
+    // onGet2(){     
+    //     console.log('Getting user based on promise now.');
+    //     this._httpService.getUsersByPromise2()
+    //     .then(
+    //     res=>this.menu = JSON.parse(JSON.stringify(res)),
+    //     err=>alert(err)
+    //     );
+    // }
     ngOnInit() {
         this.onGet();
         this.catalogService.getCatalog().then((catalog)=>{

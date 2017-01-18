@@ -40,13 +40,13 @@ export class HTTPTestComponent{
 
   }
 
-  onPost(){
-    this._httpService.postJson().subscribe(
-      data =>this.postData = JSON.stringify(data),
-      error=>alert(error),
-      ()=>console.log('Finished Post')
-    );
-  }
+  // onPost(){
+  //   this._httpService.postJson().subscribe(
+  //     data =>this.postData = JSON.stringify(data),
+  //     error=>alert(error),
+  //     ()=>console.log('Finished Post')
+  //   );
+  // }
 
 
 
