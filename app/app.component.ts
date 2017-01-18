@@ -7,6 +7,7 @@ import {Contact} from "./contact.component";
 import {About} from "./About";
 import {Checkout} from "./checkout.component";
 import {Http, HTTP_PROVIDERS} from 'angular2/http';
+import {Observable} from 'rxjs/Rx';
 // import {FilterCatalogItems} from './Utils/Filter.pipe';
 
 @Component({
@@ -29,4 +30,7 @@ import {Http, HTTP_PROVIDERS} from 'angular2/http';
 
 export class AppComponent {
     // public search:string = "";
+        clock = Observable
+        .interval(1000)
+        .map(()=> new Date());
 }

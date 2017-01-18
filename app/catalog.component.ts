@@ -17,7 +17,7 @@ import {HTTPTestService} from '../app/http/http.service';
 })
 
 export class Catalog {
-    getData
+    getData;
     public catalog:Item[] = [];
     public postData:string;
     public search:string = "";

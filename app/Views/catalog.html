@@ -1,4 +1,4 @@
-<div class="top-brands">
+<!-- <div class="top-brands">
 	<div class="container">
 		<h3>Menu</h3>
 		<div class="agile_top_brands_grids">
@@ -6,16 +6,27 @@
 			<div class="clearfix"> </div>
 		</div>
 	</div>
-<!--     <button (click) = "onPost()">Post Data</button><br/>
-    <div>Output:{{postData}}</div><br/> -->
+    <button (click) = "onPost()">Post Data</button><br/>
+    <div>Output:{{postData}}</div><br/>
+</div> -->
+<div class="top-brands">
+	<div class="container">
+		<h3>Menu</h3>
+		<div class="agile_top_brands_grids"  *ngIf="getData">
+			<item-preview *ngFor="#item of getData | filterItems:search" [item]="item"></item-preview>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+
 </div>
+
+
 <!-- 	<div *ngIf="getData">
 		<div *ngFor="#x of getData">
 			{{x.id_menu}}
 		</div>
-	</div> -->
-<!-- 		<div *ngFor="let x of getData">
-			{{x.id_menu}} -->
-			<!-- {{x.harga_menu}}
-<!-- 		
+	</div>
+		<div *ngFor="let x of getData">
+			{{x.id_menu}}
+			{{x.harga_menu}}	
 	</div> -->
