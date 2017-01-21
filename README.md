@@ -12,8 +12,8 @@ Done:
 * Get All Menu From API
 * Cart
 * Checkout
+* Post Menu to API (Customer Service)
+* Post All Menu to API
 
 To be done:
-* Post All Menu to API
 * Search Menu
-* Post Menu to API (Customer Service)
