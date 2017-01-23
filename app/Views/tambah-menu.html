@@ -26,20 +26,20 @@
      
     </div>
 
-    <div class="form-group">
+<!--     <div class="form-group">
     <label class="col-md-2" >Foto Menu :</label>
     <div class="col-md-10" style="margin-bottom: 10px">
     <input type="text" style="width: 300px" class="form-control" [(ngModel)]="foto_menu">
     </div>
      
-    </div> 
+    </div>  -->
 
     <div class="form-group">
-    <label class="col-md-2" >Id Suplier :</label>
+    <label class="col-md-2" >Suplier :</label>
     <div class="col-md-10" style="margin-bottom: 10px">
     <select class="form-control" style="width: 300px" [(ngModel)]="id_suplier">
-        <option *ngFor="#suplier of getSuplier">
-        {{suplier.id_suplier}}</option>
+        <option *ngFor="#suplier of getSuplier" value={{suplier.id_suplier}}>
+        {{suplier.nama_suplier}}</option>
     </select>
     </div>
      
@@ -49,8 +49,8 @@
     <label class="col-md-2 control-label text-primary"></label>
      
     <div class="col-md-3 cart-total">
-    <button class="order" (click)="tambahMenuToServer()">Tambah</button>
-     {{nama_menu}} {{harga_menu}} {{deskripsi_menu}} {{foto_menu}} {{id_suplier}}
+    <button class="order" (click)="tambahMenuToServer()">Tambah</button><!-- 
+     {{nama_menu}} {{harga_menu}} {{deskripsi_menu}} {{foto_menu}} {{id_suplier}} -->
     </div>
      
     </div>
